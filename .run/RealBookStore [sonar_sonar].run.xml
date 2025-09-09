@@ -6,9 +6,7 @@
         <MavenRunnerSettings>
           <option name="delegateBuildToMaven" value="false" />
           <option name="environmentProperties">
-            <map>
-              <entry key="SONAR_TOKEN" value="&lt;insert_token_here&gt;" />
-            </map>
+            <map />
           </option>
           <option name="jreName" value="#USE_PROJECT_JDK" />
           <option name="mavenProperties">
@@ -31,6 +29,7 @@
               <option value="sonar:sonar" />
             </list>
           </option>
+          <option name="multimoduleDir" />
           <option name="pomFileName" />
           <option name="profilesMap">
             <map />

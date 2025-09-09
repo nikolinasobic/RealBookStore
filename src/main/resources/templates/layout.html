@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
->
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -32,7 +32,7 @@
         <a class="navbar-brand" th:href="@{/books}">Real Book Store</a>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/books}">Books</a>
+                <a class="nav-link" th:href="@{/books}" sec:authorize="hasAuthority('VIEW_BOOKS_LIST')">Books</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/persons}">Users</a>

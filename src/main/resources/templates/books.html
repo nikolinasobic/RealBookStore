@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout}">
+      layout:decorate="~{layout}" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -42,7 +42,7 @@
       </tr>
       </tbody>
     </table>
-    <a href="/create-form">Add book</a>
+    <a href="/create-form" sec:authorize="hasAuthority('CREATE_BOOK')" >Add book</a>
   </div>
   <template id="row-template">
     <tr>

@@ -45,7 +45,7 @@ public class RatingRepository {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOG.error("Creating or updating rating failed.", e);
         }
     }
 
@@ -59,7 +59,7 @@ public class RatingRepository {
                 ratingList.add(new Rating(rs.getInt(1), rs.getInt(2), rs.getInt(3)));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            LOG.error("Getting all ratings by bookId failed. ", e);
         }
         return ratingList;
     }
